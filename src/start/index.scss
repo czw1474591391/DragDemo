@@ -1,0 +1,11 @@
+$BoxWidth:150px;
+$BoxHeight:50px;
+$BoxColor:#e8c7c7;
+@import "../index.scss";
+
+.startContent {
+    width: $BoxWidth;
+    height: $BoxHeight;
+    background: $BoxColor;
+    @extend .flexCenter;
+}

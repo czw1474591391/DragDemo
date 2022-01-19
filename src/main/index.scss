@@ -1,0 +1,68 @@
+@import "../index.scss";
+$MainWidth:800px;
+
+$BoxHeight:400px;
+$BoxPadding:10px;
+
+.MainContent {
+    width: $MainWidth;
+    @extend .flexCenter;
+    justify-content: space-around; //覆盖掉继承的css
+
+    >div {
+        flex: 0.18;
+        display: flex;
+        flex-direction: column;
+
+        >div {
+            margin-top: 20px;
+            height: $BoxHeight;
+            box-sizing: border-box;
+            padding: $BoxPadding;
+
+            >input {
+                width: 100px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .onebox {
+
+        span,
+        div {
+            @extend .boxBgColor1;
+            text-align: center;
+
+            >button {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: none;
+                background: white;
+                color: #eedcdc;
+                border: 1px solid #eedcdc;
+                margin-top: 20px;
+            }
+        }
+
+    }
+
+    .twobox {
+
+        span,
+        div {
+            @extend .boxBgColor2;
+            text-align: center;
+        }
+    }
+
+    .threebox {
+
+        span,
+        div {
+            @extend .boxBgColor3;
+            text-align: center;
+        }
+    }
+}
